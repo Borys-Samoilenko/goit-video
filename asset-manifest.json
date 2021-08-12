@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/goit-video/static/css/main.17a9498a.chunk.css",
+    "main.js": "/goit-video/static/js/main.175a98f4.chunk.js",
+    "main.js.map": "/goit-video/static/js/main.175a98f4.chunk.js.map",
+    "runtime-main.js": "/goit-video/static/js/runtime-main.eef969a5.js",
+    "runtime-main.js.map": "/goit-video/static/js/runtime-main.eef969a5.js.map",
+    "static/css/2.bc922b9c.chunk.css": "/goit-video/static/css/2.bc922b9c.chunk.css",
+    "static/js/2.d52e8cbe.chunk.js": "/goit-video/static/js/2.d52e8cbe.chunk.js",
+    "static/js/2.d52e8cbe.chunk.js.map": "/goit-video/static/js/2.d52e8cbe.chunk.js.map",
+    "index.html": "/goit-video/index.html",
+    "static/css/2.bc922b9c.chunk.css.map": "/goit-video/static/css/2.bc922b9c.chunk.css.map",
+    "static/css/main.17a9498a.chunk.css.map": "/goit-video/static/css/main.17a9498a.chunk.css.map",
+    "static/js/2.d52e8cbe.chunk.js.LICENSE.txt": "/goit-video/static/js/2.d52e8cbe.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.eef969a5.js",
+    "static/css/2.bc922b9c.chunk.css",
+    "static/js/2.d52e8cbe.chunk.js",
+    "static/css/main.17a9498a.chunk.css",
+    "static/js/main.175a98f4.chunk.js"
+  ]
+}
