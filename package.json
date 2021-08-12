@@ -1,10 +1,10 @@
 {
-  "name": "goit-react-hw-02-feedback",
+  "name": "goit-video",
   "version": "0.1.0",
-  "homepage": "https://Borys-Samoilenko.github.io/goit-react-hw-02-feedback",
+  "homepage": "https://Borys-Samoilenko.github.io/goit-video",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Borys-Samoilenko/goit-react-hw-02-feedback.git"
+    "url": "git+https://github.com/Borys-Samoilenko/goit-video.git"
   },
   "private": true,
   "dependencies": {
