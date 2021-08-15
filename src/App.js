@@ -1,9 +1,13 @@
 import React from 'react';
-import Logo from './components/Logo';
-import PaintingList from './components/PaintingList';
-import Panel from './components/Panel';
+// import Logo from './components/Logo';
+import PaintingList from './components/PaintingList/PaintingList';
+import Panel from './components/Panel/Panel';
 import paintings from './paintings.json';
 import ColorPicker from './components/ColorPicker/ColorPicker';
+import Notification from './components/Notification/Notification';
+// import Container from './components/Container/Container';
+// import AppBar from './components/AppBar/AppBar';
+import Layout from './components/Layout/Layout';
 
 const colorPickerOptions = [
   { label: 'red', color: '#F44336' },
@@ -16,8 +20,10 @@ const colorPickerOptions = [
 
 const App = () => {
   return (
-    <div>
+    <Layout>
       <ColorPicker options={colorPickerOptions} />
+      <Notification text="CSS-modules" />
+      <Notification text="Error" type="error" />
       <Panel title="Latest news">
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
         <a href="https://reactjs.org">Read more...</a>
@@ -27,9 +33,8 @@ const App = () => {
         <p>Porro magni laundatium aspernatur debitis deserunt ipsam</p>
       </Panel>
 
-      <Logo text="Main container" />
       <PaintingList paintings={paintings} />
-    </div>
+    </Layout>
   );
 };
 
