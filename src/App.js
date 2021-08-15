@@ -1,13 +1,9 @@
-import React from 'react';
-// import Logo from './components/Logo';
-import PaintingList from './components/PaintingList/PaintingList';
-import Panel from './components/Panel/Panel';
-import paintings from './paintings.json';
-import ColorPicker from './components/ColorPicker/ColorPicker';
-import Notification from './components/Notification/Notification';
-// import Container from './components/Container/Container';
-// import AppBar from './components/AppBar/AppBar';
-import Layout from './components/Layout/Layout';
+import React, { Component } from 'react';
+import Counter from './components/Counter';
+import Dropdown from './components/Dropdown';
+import ColorPicker from './components/ColorPicker';
+import TodoList from './components/TodoList';
+import initialTodos from './todos.json';
 
 const colorPickerOptions = [
   { label: 'red', color: '#F44336' },
@@ -18,24 +14,43 @@ const colorPickerOptions = [
   { label: 'indigo', color: '#3F51B5' },
 ];
 
-const App = () => {
-  return (
-    <Layout>
-      <ColorPicker options={colorPickerOptions} />
-      <Notification text="CSS-modules" />
-      <Notification text="Error" type="error" />
-      <Panel title="Latest news">
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-        <a href="https://reactjs.org">Read more...</a>
-      </Panel>
+class App extends Component {
+  state = {
+    todos: initialTodos,
+  };
 
-      <Panel>
-        <p>Porro magni laundatium aspernatur debitis deserunt ipsam</p>
-      </Panel>
+  deleteTodo = todoId => {
+    this.setState(prevState => ({
+      todos: prevState.todos.filter(todo => todo.id !== todoId),
+    }));
+  };
 
-      <PaintingList paintings={paintings} />
-    </Layout>
-  );
-};
+  render() {
+    const { todos } = this.state;
+
+    const totalTodoCount = todos.length;
+    const completedTodoCount = todos.reduce(
+      (total, todo) => (todo.completed ? total + 1 : total),
+      0,
+    );
+
+    return (
+      <>
+        <h1>Состояние компонента</h1>
+
+        <Counter initialValue={10} />
+        <Dropdown />
+        <ColorPicker options={colorPickerOptions} />
+
+        <div>
+          <p>Общее кол-во: {totalTodoCount}</p>
+          <p>Кол-во выполненных: {completedTodoCount}</p>
+        </div>
+
+        <TodoList todos={todos} onDeleteTodo={this.deleteTodo} />
+      </>
+    );
+  }
+}
 
 export default App;
