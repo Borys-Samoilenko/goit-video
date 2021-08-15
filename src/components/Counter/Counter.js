@@ -12,6 +12,16 @@ class Counter extends Component {
     //
   };
 
+  /* аналог нижней записи state
+   * constructor() {
+   *    super();
+   *
+   *   this.state = {
+   *      value: 5,
+   *    };
+   *  }
+   */
+
   state = {
     value: this.props.initialValue,
   };
